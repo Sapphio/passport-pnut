@@ -1,7 +1,7 @@
-# Passport-Pnut
+# Passport-Tavrn
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with [pnut.io](https://pnut.io) using the OAuth 2.0 API.
+with [tavrn.gg](https://tavrn.gg) using the OAuth 2.0 API.
 
 ## Installation
 
@@ -16,12 +16,12 @@ OAuth tokens.  The strategy requires a `verify` callback, which accepts these
 credentials and calls `done` providing a user, as well as `options` specifying a
 consumer key, consumer secret, and callback URL.
 
-    const PnutStrategy = require("passport-pnut").Strategy;
+    const TavrnStrategy = require("passport-tavrn").Strategy;
 
-    passport.use(new PnutStrategy({
-        clientID: PNUT_CLIENT_ID,
-        clientSecret: PNUT_CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/pnut/callback"
+    passport.use(new TavrnStrategy({
+        clientID: TAVRN_CLIENT_ID,
+        clientSecret: TAVRN_CLIENT_SECRET,
+        callbackURL: "http://127.0.0.1:3000/auth/tavrn/callback"
       },
       function(token, tokenSecret, profile, done) {
         User.findOrCreate({ pnutId: profile.id }, function (err, user) {
@@ -32,21 +32,21 @@ consumer key, consumer secret, and callback URL.
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'pnut'` strategy, to
+Use `passport.authenticate()`, specifying the `'tavrn'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/auth/pnut',
-      passport.authenticate('pnut'),
+    app.get('/auth/tavrn',
+      passport.authenticate('tavrn'),
       function(req, res){
-        // The request will be redirected to pnut.io for authentication, so this
+        // The request will be redirected to tavrn.gg for authentication, so this
         // function will not be called.
       });
 
-    app.get('/auth/pnut/callback',
-      passport.authenticate('pnut', { failureRedirect: '/login' }),
+    app.get('/auth/tavrn/callback',
+      passport.authenticate('tavrn', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/');
