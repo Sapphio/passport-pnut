@@ -5,7 +5,7 @@ with [tavrn.gg](https://tavrn.gg) using the OAuth 2.0 API.
 
 ## Installation
 
-    $ npm install passport-pnut
+    $ npm install passport-tavrn
 
 ## Usage
 
