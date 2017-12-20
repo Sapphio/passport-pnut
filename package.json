@@ -1,15 +1,27 @@
 {
-  "name": "passport-pnut",
+  "name": "passport-tavrn",
   "version": "0.1.2",
-  "description": "pnut.io authentication strategy for Passport.",
+  "description": "tavrn.gg authentication strategy for Passport.",
   "author": "Robert <ing@codespelunkers.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/33mhz/passport-pnut.git"
+    "url": "http://github.com/Sapphio/passport-tavrn.git"
   },
-  "main": "./lib/passport-pnut",
+  "main": "./lib/passport-tavrn",
   "dependencies": {
     "passport-oauth": "^1.0.0"
   },
-  "keywords": ["passport", "pnut", "pnutio", "pnut.io", "oauth", "auth", "authn", "authentication", "identity"]
+  "keywords": [
+    "passport",
+    "tavrn",
+    "tavrngg",
+    "pnut",
+    "pnutio",
+    "pnut.io",
+    "oauth",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ]
 }
